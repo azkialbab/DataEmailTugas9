@@ -1,0 +1,226 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#121212">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".admin.AddMovie">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:titleTextColor="#FFFFFF"
+            android:title="Tambah Film"
+            android:elevation="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="start"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Add New Film"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#E50914"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Movie Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Movie Name -->
+            <EditText
+                android:id="@+id/movieName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Film"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/video"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Genre -->
+            <EditText
+                android:id="@+id/movieGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Genre"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_genre"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Duration -->
+            <EditText
+                android:id="@+id/movieDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Durasi (Menit)"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_duration"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginVertical="16dp" />
+
+            <!-- Age Restriction -->
+            <EditText
+                android:id="@+id/etAgeRestriction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Batasan Umur (Contoh: 13+, 18+)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_age"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Release Date -->
+            <EditText
+                android:id="@+id/etReleaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DD-MM-YYYY"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+
+        <!-- Poster Link Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Poster Link -->
+            <EditText
+                android:id="@+id/etPosterLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Link Poster Film"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_link"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Vote Average -->
+            <EditText
+                android:id="@+id/etVoteAverage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rating Film (Contoh: 8.5)"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textColorHint="#B0B0B0"
+                android:drawableLeft="@drawable/ic_rate"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+
+        <!-- Overview Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Overview -->
+            <EditText
+                android:id="@+id/etOverview"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="Sinopsis Film"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="top|start"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="5"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="#E50914"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:elevation="12dp"
+            android:paddingVertical="8dp"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#000000">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".admin.UpdateMovie">
+
+        <!-- Toolbar with Back Icon -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#121212"
+            android:elevation="4dp"
+            app:titleTextColor="#FFFFFF"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Update Film"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#E50914"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Movie Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Movie Name -->
+            <EditText
+                android:id="@+id/movieName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Film"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/video"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Genre -->
+            <EditText
+                android:id="@+id/movieGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Genre"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_genre"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Duration -->
+            <EditText
+                android:id="@+id/movieDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Durasi (Menit)"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_duration"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginVertical="16dp" />
+
+            <!-- Age Restriction -->
+            <EditText
+                android:id="@+id/etAgeRestriction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Batasan Umur (Contoh: 13+, 18+)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_age"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Release Date -->
+            <EditText
+                android:id="@+id/etReleaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DD-MM-YYYY"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/oMovie"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:hint="Overview Movie"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawableTint="#FFBB86FC"
+                android:background="@drawable/input_background"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+
+        <!-- Update Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdateMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:backgroundTint="#E50914"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:elevation="12dp"
+            android:paddingVertical="8dp"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>

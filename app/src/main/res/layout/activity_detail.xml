@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/black"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Toolbar with Netflix-inspired logo -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/movieDetailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:titleTextColor="#FFFFFF"
+            android:title="Movie Detail"
+            android:elevation="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="start"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"/>
+
+            <!-- Toolbar Title -->
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:src="@drawable/logo"
+                android:text="Movie Detail"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Movie Poster -->
+        <ImageView
+            android:id="@+id/moviePosterDetail"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample"/>
+
+        <!-- Movie Title -->
+        <TextView
+            android:id="@+id/movieTitleDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+
+        <!-- Movie Duration and Genre -->
+        <TextView
+            android:id="@+id/movieDurationGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="8dp" />
+
+        <!-- Movie Overview (Synopsis) -->
+        <TextView
+            android:id="@+id/movieSynopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Synopsis: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac quam nec velit eleifend hendrerit."
+            android:textSize="16sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Movie Release Date -->
+        <TextView
+            android:id="@+id/movieReleaseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Release Date: December 14, 2024"
+            android:textSize="16sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Movie Age Restriction -->
+        <TextView
+            android:id="@+id/movieAgeRestriction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age Restriction: 13+"
+            android:textSize="16sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Movie Rating -->
+        <TextView
+            android:id="@+id/movieRatingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RatingBar
+            android:id="@+id/movieRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:rating="3.5"
+            android:layout_marginTop="8dp"
+            android:stepSize="0.5"
+            android:tint="#E50914"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!-- Netflix Logo -->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Netflix Logo"
+        android:layout_gravity="center" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Welcome to Netflix"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center" />
+
+
+    <!-- Instruction Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Please sign in to continue"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:layout_gravity="center" />
+
+    <!-- Username Input -->
+    <EditText
+        android:id="@+id/lusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:backgroundTint="@color/gray"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="12dp"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/lpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:backgroundTint="@color/gray"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawableEnd="@drawable/ic_eye_close"
+        android:drawablePadding="12dp"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="textPassword" />
+
+    <!-- Spinner for Role -->
+    <Spinner
+        android:id="@+id/spinner_role_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/gray"
+        android:popupBackground="@color/white"
+        android:theme="@style/SpinnerStyle" />
+
+    <!-- Login Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="Sign In"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginBottom="24dp"
+        android:padding="8dp" />
+
+    <!-- Register Text -->
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New to Netflix? Sign up now."
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:gravity="center" />
+</LinearLayout>

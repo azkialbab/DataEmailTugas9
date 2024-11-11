@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#000000"
+    tools:context=".admin.DetailMovie">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:titleTextColor="#FFFFFF"
+            android:title="Detail Movie"
+            android:elevation="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="start"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"/>
+
+            <!-- Logo Netflix -->
+            <ImageView
+                android:id="@+id/logoNetflix"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Netflix Logo"
+                android:layout_gravity="start|center_vertical"/>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Detail Movie Title -->
+        <TextView
+            android:id="@+id/detailMovieTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detail Movie"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"/>
+
+        <!-- Poster Film -->
+        <ImageView
+            android:id="@+id/moviePosterDetail"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample"/>
+
+        <!-- Detail Film -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <!-- Judul Film -->
+            <TextView
+                android:id="@+id/movieTitleDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Judul Film"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <!-- Durasi dan Genre -->
+            <TextView
+                android:id="@+id/movieDurationGenreDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Durasi: 2h 30m | Genre: Action"
+                android:textSize="14sp"
+                android:textColor="#B0B0B0"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Sinopsis Film -->
+            <TextView
+                android:id="@+id/movieSynopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sinopsis: Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                android:textSize="16sp"
+                android:textColor="#B0B0B0"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Rating dan Restriksi Umur -->
+            <TextView
+                android:id="@+id/movieRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rating: 8.5"
+                android:textSize="16sp"
+                android:textColor="#B0B0B0"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/movieAgeRestrictionDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Age Restriction: PG-13"
+                android:textSize="16sp"
+                android:textColor="#B0B0B0"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Tombol Aksi -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center">
+
+                <!-- Edit Button -->
+                <ImageButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_edit"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:tint="#E50914"
+                    android:contentDescription="Edit"/>
+
+                <!-- Delete Button -->
+                <ImageButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_delete"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    app:tint="#E50914"
+                    android:contentDescription="Delete"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

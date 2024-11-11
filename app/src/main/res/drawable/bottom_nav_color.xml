@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warna saat item dipilih -->
+    <item android:color="#0B0A0A" android:state_checked="true" /> <!-- Warna hover (misalnya merah Netflix) -->
+
+    <!-- Warna saat item ditekan -->
+    <item android:color="#FFFFFF" android:state_pressed="true" /> <!-- Warna saat ditekan -->
+
+    <!-- Warna default saat tidak dipilih -->
+    <item android:color="#83EBE7E7" /> <!-- Warna default (misalnya putih) -->
+</selector>

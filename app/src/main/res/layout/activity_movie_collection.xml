@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.MovieCollection"
+    android:background="#000000">
+
+    <!-- Toolbar -->
+<androidx.appcompat.widget.Toolbar
+android:id="@+id/toolbar"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="#000000"
+android:elevation="4dp"
+android:paddingStart="16dp"
+android:paddingEnd="16dp"
+android:gravity="center_horizontal">
+
+<!-- Netflix Logo in Toolbar -->
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/netflixLogo"
+    android:layout_width="200dp"
+    android:layout_height="80dp"
+    android:src="@drawable/logo"
+    android:contentDescription="Netflix Logo"
+    android:layout_gravity="center"/>
+
+</androidx.appcompat.widget.Toolbar>
+
+    <!-- Movie Collection Title -->
+<TextView
+android:id="@+id/movieCollectionTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Our Movie Collection"
+android:textSize="20sp"
+android:textStyle="bold"
+android:textColor="#FFFFFF"
+android:layout_marginTop="16dp"
+android:gravity="center"
+android:layout_gravity="center"/>
+
+    <!-- Add Movie Button Section -->
+<LinearLayout
+android:orientation="horizontal"
+android:layout_width="300dp"
+android:layout_height="50dp"
+android:layout_gravity="center"
+android:layout_marginTop="32dp"
+android:layout_marginBottom="32dp"
+android:background="@drawable/button_background"
+android:padding="10dp"
+android:gravity="center">
+
+<!-- Add Movie Icon -->
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/addMovieIcon"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:src="@drawable/ic_add"
+    android:contentDescription="Add Movie Icon"
+    android:tint="#E50914"/>
+
+<!-- Add Movie Text -->
+<TextView
+    android:id="@+id/addMovieText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Add New Movie"
+    android:textSize="18sp"
+    android:textColor="#FFFFFF"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:layout_gravity="center_vertical"
+    android:layout_marginStart="8dp"/> <!-- Margin for space between icon and text -->
+
+</LinearLayout>
+
+    <!-- RecyclerView for Movie Collection -->
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/rvMovieCollection"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:layout_marginBottom="16dp"
+android:padding="8dp"
+android:clipToPadding="false"
+app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+android:scrollbars="vertical"/>
+    </LinearLayout>
